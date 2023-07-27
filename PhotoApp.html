@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lanf="en-gb">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>I love frogs!</title>
+        <meta charset="UTF-8">
+        <meta name ="description" content="An appreciation website for frogs">
+        <meta author="Tom Kenyon">
+        <meta keywords="frog, frog in a pond, frogs">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<script src="scripts.js"></script>-->
+    </head>
+
+    <body>
+        <div id="websiteHolder">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="PhotoApp.html" id="active">Photo App</a></li>
+                        <li><a href="Gallery.html">Gallery</a></li>
+                        <li><a href="quiz.html">Quiz</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <h1 id="TopText">Frogs!</h1>
+                <p>Welcome to my website about appreciating frogs, I love frogs!</p>
+            </header>
+            <main>
+                <section>
+                    <h3>Why I love frogs</h3>
+                    <p>There are lots of reasons to love frogs, such as:</p>
+                    <ul id="factlist">
+                        <li>They are round</li>
+                        <li>They make funny noises</li>
+                        <li>They're easy to draw</li>
+                        <li>I love them so you should too</li>
+                    </ul>
+                    <img src="Frog in a pond.png" alt="A picture of a frog in a pond" width=30%>
+                    <p>For cool frog facts click: <a href="https://www.amphibianlife.com/frog-facts-for-kids/">here</a></p>
+                </section>
+
+                <section>
+                    <div id="formArea">
+                        <h2>Submit frog pictures and facts here</h2>
+                        <form name="app">
+                            <fieldset>
+                                <legend>How many frogs are there in the world?</legend>
+
+                                <input id="one" type="radio" name="numberOfFrogs" value="1">
+                                <label for="one">1</label>
+                                
+                                <input id="two" type="radio" name="numberOfFrogs" value="2">
+                                <label for="two">2</label>
+                                
+                                <input id="threeplus" type="radio" name="numberOfFrogs" value="3+">
+                                <label for="threeplus">3+</label>
+                            </fieldset>
+
+                            <fieldset id="questions">
+                                <legend>What are your favourite frog shapes?</legend>
+
+                                <input id="round" type="checkbox" name="frogShapes" value="round">
+                                <label for="round">Round</label>
+                                <p></p>
+                                <input id="flat" type="checkbox" name="frogShapes" value="flat">
+                                <label for="flat">Flat</label>
+                                <p></p>
+                                <input id="long" type="checkbox" name="frogShapes" value="long">
+                                <label for="long">Long</label>
+                            </fieldset>
+                            
+                            <div id="urlquestion">
+                            <label for="url">Enter your photo URL</label>
+                            <input id="url" type="text" name="photourl">
+                            </div>
+
+                            <input id="submit" type="button" value="submit" onclick="saveFile()">
+
+
+                        </form>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <p>Copyright Tom Kenyon</p>
+            </footer>
+        </div>
+    </body>
+</html>
+
+<script>
+    function FizzBuzzCheck (x) {
+        if (x % 3 == 0 && x % 5 == 0) return "FizzBuzz";
+        else if (x % 3 == 0) return "Fizz";
+        else if (x % 5 == 0) return "Buzz";
+        else return x;
+    }
+    function FizzBuzzFull (x) {
+        for (let y = 1; y <= x; y++)
+        {
+            console.log(FizzBuzzCheck(y))
+        }
+    }
+    function FizzBuzzAlternate (x) {
+        let array = [];
+        for (let y = 1; y <= x; y++)
+        {
+            array.push(FizzBuzzCheck(y));
+        }
+        return array;
+    }
+    //FizzBuzzFull(15);
+    //console.log(FizzBuzzAlternate(15));
+
+    function lessThanTen (x) {
+        if (x < 10) return "less";
+        else if (x > 10) return "more";
+        else return "equal to";
+    }
+    //console.log(lessThanTen(11));
+
+    function name (name) {
+        if (name == "Charles" || name == "Elizabeth") return "Hello, Your Majesty";
+        else return ("Hello " + name);
+    }
+    //let username = prompt ("write your name");
+    //alert(name(username));
+
+    function KnockKnockJoke () {
+        let response = prompt("Knock Knock!");
+        if (response != "who's there") return false;
+        response = prompt("Doctor!");
+        if (response != "doctor who?") return false;
+        alert("that's right!");
+        return true;
+    }
+    //KnockKnockJoke();
+
+    function Area () {
+        let width = prompt("What is the width?");
+        let height = prompt("what is the height?");
+        let area = width * height;
+        alert ("the area is " + area);
+    }
+    //Area();
+
+    function canVote() {
+        let year = prompt("What year were you born?");
+        let month = prompt("What month were you born?");
+        let day = prompt("What day were you born?");
+
+        if (year < 2005) return true;
+        else if (year == 2005 && month < 07 || (year == 2005 && month == 07 && day <= 27)) return true;
+        else return false;
+
+
+    }
+    //console.log(canVote());
+
+</script>
+
+
+<!--
+<script>
+    let saveFile = () => {
+        form = document.forms.app.elements;
+        const numberOfFrogs = form.numberOfFrogs.value;
+        const frogShapes = form.frogShapes.value;
+        const link = form.photourl.value;
+
+        // This variable stores all the data.
+        let data = 
+            '\r how many frogs?: ' + numberOfFrogs + ' \r\n ' + 
+            'best frog shapes: ' + frogShapes + ' \r\n ' + 
+            'Link: ' + link 
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = "filename";	   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+        newLink.innerHTML = "Download File:";
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+    }
+</script>
+-->
+
+
+
+
+

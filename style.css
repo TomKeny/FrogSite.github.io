@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(178, 252, 199);
+    text-align: center;
+}
+
+p, h1, h2, h3, ul, li {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+#factlist {
+    max-width: 250px;
+    text-align: left;
+}
+
+#websiteHolder {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(129, 206, 151);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#TopText {
+    background-color: rgb(99, 171, 119);
+    color: rgb(22, 45, 28);
+    font-weight: bold;
+    font-size: 90px;
+    width:auto;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+#formArea {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+    background-color: rgb(105, 202, 133);
+    padding: 5px;
+    border-radius: 8px;
+}
+
+#questions {
+    text-align: left;
+}
+
+#urlquestion {
+    text-align: left;
+    padding: 5px;
+    padding-left: 10px;
+    background-color: rgb(95, 189, 122);
+    border-radius: 4px;
+}
+
+#submit {
+    background-color: rgb(67, 154, 92);
+    border-radius: 3px;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+
+nav ul {
+    background-color: rgb(95, 189, 122);
+    overflow: hidden;
+    list-style-type: none;
+}
+
+    nav ul a {
+        float: right;
+        display: block;
+        color: rgb(40, 90, 50);
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+nav a:hover {
+    background-color: rgb(120, 220, 140);
+}
+
+#active {
+    background-color: rgb(178, 252, 199);
+}
+
+
+.flex-container {
+    background-color: darkseagreen;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-around;
+    padding: 10px;
+    border-radius:8px;
+}
+
+
+.flex-container img {
+    height: 150px;
+    padding: 10px;
+    border-style: solid;
+    border-color: rgb(51, 96, 64);
+    margin: 20px;
+    background-color: rgb(89, 249, 134);
+}
+
+#contactFrog {
+    border-radius: 8px;
+}

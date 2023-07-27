@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lanf="en-gb">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Quiz</title>
+        <script src="scripts.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <div id="websiteHolder">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a> </li>
+                        <li><a href="Photoapp.html">Photo App</a> </li>
+                        <li><a href="Gallery.html">Gallery</a> </li>
+                        <li><a href="quiz.html" id="active">Quiz</a></li>
+                        <li><a href="Contact.html">Contact</a> </li>
+                    </ul>
+                </nav>
+            </header>
+            <h1 id="TopText">Frog Quiz</h1>
+            <div id="quiz">
+                <h2>The Quiz</h2>
+                <form name="Quiz">
+                    <label for="name">Enter your name</label>
+                    <input id="name" type="text" name="name">
+
+
+                    <legend>How many frogs are there in the world?</legend>
+
+                    <input id="one" type="radio" name="numberOfFrogs" value="1">
+                    <label for="one">1</label>
+                    <br>            
+                    <input id="two" type="radio" name="numberOfFrogs" value="2">
+                    <label for="two">2</label>
+                    <br>
+                    <input id="threeplus" type="radio" name="numberOfFrogs" value="3+">
+                    <label for="threeplus">3+</label>
+
+                    <br>
+                    <br>
+
+                    <legend>Which frog is the largest?</legend>
+
+                    <input id="bullfrog" type="radio" name="largest" value="bullfrog">
+                    <label for="bullfrog">Bullfrog</label>
+                    <br>            
+                    <input id="treefrog" type="radio" name="largest" value="treefrog">
+                    <label for="treefrog">Treefrog</label>
+                    <br>
+                    <input id="rainfrog" type="radio" name="largest" value="rainfrog">
+                    <label for="rainfrog">Rainfrog</label>
+
+                    <br>
+                    <br>
+
+                    <legend>Which frog is the smallest?</legend>
+
+                    <input id="bullfrog" type="radio" name="smallest" value="bullfrog">
+                    <label for="bullfrog">Bullfrog</label>
+                    <br>            
+                    <input id="treefrog" type="radio" name="smallest" value="treefrog">
+                    <label for="treefrog">Treefrog</label>
+                    <br>
+                    <input id="rainfrog" type="radio" name="smallest" value="rainfrog">
+                    <label for="rainfrog">Rainfrog</label>
+                </form>
+            </div>
+            <br>
+            <button type="button" onClick="checkAnswers()">Submit</button>
+        </div>
+    </body>
+</html>
